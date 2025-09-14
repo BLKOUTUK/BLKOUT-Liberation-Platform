@@ -1,0 +1,71 @@
+# BLKOUT Liberation Platform - Git Ignore
+# Community-owned development with liberation values
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production builds
+dist/
+build/
+*/dist/
+*/build/
+
+# Development
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*/coverage/
+
+# nyc test coverage
+.nyc_output
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Community governance sensitive files
+/community-governance/private/
+/quality-assurance/internal-notes/
+
+# Infrastructure secrets (use proper secret management)
+**/secrets/
+**/.secrets/
+kubernetes-secrets.yaml
+
+# But keep liberation values visible
+!/docs/LIBERATION_VALUES.md
+!/community-governance/democratic-processes/
+!/quality-assurance/qi-reports/

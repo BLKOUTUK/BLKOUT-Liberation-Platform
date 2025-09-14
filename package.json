@@ -1,0 +1,116 @@
+{
+  "name": "blkout-liberation-platform",
+  "version": "1.0.0-liberation",
+  "description": "Revolutionary architecture for community empowerment - the world's first technically implemented liberation platform",
+  "keywords": [
+    "liberation",
+    "community-ownership",
+    "creator-sovereignty", 
+    "anti-oppression",
+    "black-queer-joy",
+    "democratic-governance",
+    "economic-justice",
+    "community-benefit-society"
+  ],
+  "homepage": "https://blkoutcollective.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blkout-collective/liberation-platform.git"
+  },
+  "license": "Community-Liberation-License-1.0",
+  "author": {
+    "name": "BLKOUT Collective",
+    "email": "governance@blkoutcollective.org",
+    "url": "https://blkoutcollective.org"
+  },
+  "contributors": [
+    "Community Governance Council",
+    "Creator Sovereignty Working Group", 
+    "Anti-Oppression Technology Collective",
+    "Black Queer Liberation Tech Squad"
+  ],
+  "scripts": {
+    "dev": "npm run dev:liberation",
+    "dev:liberation": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:sovereignty\"",
+    "dev:frontend": "cd implementation/frontend && npm run dev",
+    "dev:backend": "cd implementation/backend && npm run dev", 
+    "dev:sovereignty": "cd implementation/data-layer && npm run dev",
+    "build": "npm run build:liberation",
+    "build:liberation": "npm run build:frontend && npm run build:backend && npm run build:sovereignty",
+    "build:frontend": "cd implementation/frontend && npm run build",
+    "build:backend": "cd implementation/backend && npm run build",
+    "build:sovereignty": "cd implementation/data-layer && npm run build",
+    "test": "npm run test:liberation",
+    "test:liberation": "npm run test:values && npm run test:layers && npm run test:integration",
+    "test:values": "npm run test:creator-sovereignty && npm run test:anti-oppression && npm run test:community-governance",
+    "test:creator-sovereignty": "echo 'Testing 75% creator sovereignty enforcement...' && npm run test:layer-3 -- --grep 'creator.*75'",
+    "test:anti-oppression": "echo 'Testing anti-oppression technology...' && npm run test:all -- --grep 'oppression|accessibility|trauma'", 
+    "test:community-governance": "echo 'Testing democratic governance...' && npm run test:layer-6 -- --grep 'democratic|governance|consensus'",
+    "test:layers": "npm run test:layer-1 && npm run test:layer-2 && npm run test:layer-3 && npm run test:layer-4 && npm run test:layer-5 && npm run test:layer-6",
+    "test:layer-1": "echo 'Testing Layer 1: Frontend Presentation...' && cd implementation/frontend && npm test",
+    "test:layer-2": "echo 'Testing Layer 2: API Gateway...' && cd implementation/backend && npm test -- api-gateway",
+    "test:layer-3": "echo 'Testing Layer 3: Business Logic...' && cd implementation/backend && npm test -- business-logic", 
+    "test:layer-4": "echo 'Testing Layer 4: Data Sovereignty...' && cd implementation/data-layer && npm test",
+    "test:layer-5": "echo 'Testing Layer 5: Infrastructure...' && cd implementation/infrastructure && npm test",
+    "test:layer-6": "echo 'Testing Layer 6: Foundation...' && npm run test:governance",
+    "test:integration": "echo 'Testing liberation values integration...' && npm run test:full-platform",
+    "test:full-platform": "jest --config jest.integration.config.js",
+    "test:governance": "echo 'Testing community governance implementation...' && npm run test:democratic-processes",
+    "test:democratic-processes": "jest --config jest.governance.config.js",
+    "setup:community-governance": "node scripts/setup-community-governance.js",
+    "setup:liberation-values": "node scripts/setup-liberation-values.js", 
+    "deploy:community": "npm run deploy:liberation",
+    "deploy:liberation": "echo 'Deploying liberation platform...' && npm run build && npm run deploy:infrastructure && npm run deploy:sovereignty",
+    "deploy:infrastructure": "cd implementation/infrastructure && kubectl apply -f kubernetes/",
+    "deploy:sovereignty": "echo 'Deploying with community consent...' && npm run verify:community-consent && npm run deploy:platform",
+    "deploy:platform": "echo 'Platform deployment with liberation values validation...'",
+    "verify:community-consent": "node scripts/verify-community-consent.js",
+    "validate:liberation": "npm run validate:creator-sovereignty && npm run validate:anti-oppression && npm run validate:community-governance",
+    "validate:creator-sovereignty": "node scripts/validate-creator-sovereignty.js",
+    "validate:anti-oppression": "node scripts/validate-anti-oppression.js", 
+    "validate:community-governance": "node scripts/validate-community-governance.js",
+    "community:meeting": "echo 'Starting community governance meeting interface...' && node scripts/community-meeting.js",
+    "community:vote": "echo 'Opening democratic voting interface...' && node scripts/community-vote.js",
+    "community:transparency": "echo 'Generating community transparency report...' && node scripts/community-transparency.js"
+  },
+  "dependencies": {
+    "liberation-values": "^1.0.0-community",
+    "creator-sovereignty": "^0.75.0", 
+    "anti-oppression-tech": "^1.0.0-community",
+    "democratic-governance": "^1.0.0-community",
+    "community-consent": "^1.0.0-liberation",
+    "black-queer-joy": "^1.0.0-authentic",
+    "economic-justice": "^1.0.0-transparent"
+  },
+  "devDependencies": {
+    "liberation-testing": "^1.0.0-community",
+    "qi-validation": "^1.0.0-liberation",
+    "community-governance-tools": "^1.0.0-democratic",
+    "accessibility-testing": "^1.0.0-inclusive"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "liberation": {
+    "creatorSovereigntyMinimum": "75%",
+    "communityGovernance": "democratic",
+    "economicJustice": "transparent",
+    "antiOppression": "embedded",
+    "culturalAuthenticity": "black-queer-joy",
+    "accessibilityStandard": "WCAG-2.1-AA"
+  },
+  "community": {
+    "governanceModel": "community-benefit-society",
+    "decisionMaking": "one-member-one-vote", 
+    "conflictResolution": "restorative-justice",
+    "financialTransparency": "quarterly-reports",
+    "codeOfConduct": "liberation-principles"
+  },
+  "quality": {
+    "inspector": "enabled",
+    "separationOfConcerns": "enforced",
+    "liberationValues": "validated",
+    "communityOwnership": "protected"
+  }
+}
