@@ -193,9 +193,9 @@ This platform operates under a **Community Liberation License** that ensures:
 
 ---
 
-**Contact**: [Community Governance Council](mailto:governance@blkoutcollective.org)  
-**Repository**: [GitHub - BLKOUT Liberation Platform](https://github.com/blkout-collective/liberation-platform)  
-**Community**: [BLKOUT Collective Discord](https://discord.gg/blkoutcollective)  
-**Documentation**: [Liberation Platform Docs](https://docs.blkoutcollective.org)
+**Contact**: [BLKOUT Team](mailto:info@blkoutuk.com)  
+**Repository**: [GitHub - BLKOUT Liberation Platform](https://github.com/BLKOUTUK/BLKOUT-Liberation-Platform)  
+**Community**: [BLKOUT Hub](https://blkouthub.com)  
+**Documentation**: [BLKOUT Platform Docs](https://blkoutnxt.carrd.co)
 
 *Built with liberation values • Maintained by community • Owned by the people*
